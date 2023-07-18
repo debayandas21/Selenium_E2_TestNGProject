@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SampleSuite">
+  <test thread-count="5" 
+  name="Test">
+  <groups>
+  <define name="SmokeTest"> 
+  <include name= "featurefour"></include>
+  <include name= "featurefive"></include>
+  </define>
+  
+  <define name= "RegressionTest">
+  <include name= "featureone"></include>
+  <include name= "featuretwo"></include>
+   <include name= "featurethree"></include>
+  </define>
+  
+  <run>
+  <include name="RegressionTest"></include>
+   
+  </run>
+  </groups>
+    <classes>
+     	  <!-- <class name="testScripts.GoogleSearch"/>
+        <class name="testScripts.SampleTest"/> -->
+        <class name="testScripts.SampleTestNG_classOne" />
+        <class name="testScripts.SampleTestNG_classTwo" />
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- SampleSuite -->
