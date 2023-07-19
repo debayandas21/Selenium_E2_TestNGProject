@@ -3,14 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.GoogleSearch">
+      <class name="testScripts.browserLoginPage">
         <methods>
-          <include name="SeleniumTutorial_Search"/>
-          <include name="JavaTutorial_Search"/>
-          <include name="Setup"/>
-          <include name="TearDown"/>
+          <include name="setupProperty"/>
+          <include name="loadBrowser"/>
         </methods>
-      </class> <!-- testScripts.GoogleSearch -->
+      </class> <!-- testScripts.browserLoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

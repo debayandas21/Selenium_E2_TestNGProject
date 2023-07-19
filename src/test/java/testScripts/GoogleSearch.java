@@ -23,6 +23,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import CommonUtils.utilities;
+import lombok.experimental.UtilityClass;
+
 public class GoogleSearch {
 
 	WebDriver driver;
@@ -89,6 +92,8 @@ public class GoogleSearch {
 	public void generateReport(ITestResult result) {
 		if(result.getStatus()== ITestResult.FAILURE) {
 			extentTest.fail(result.getThrowable().getMessage());
+			String path=utilities.getScreenshotPath(driver);
+			extentTest.addScreenCaptureFromPath(path);
 		}
 			
 		driver.close();

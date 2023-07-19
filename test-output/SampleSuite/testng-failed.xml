@@ -4,6 +4,13 @@
   <parameter name="Browser" value="Chrome"/>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testScripts.browserLoginPage">
+        <methods>
+          <include name="setup"/>
+          <include name="Setup"/>
+          <include name="loadBrowser"/>
+        </methods>
+      </class> <!-- testScripts.browserLoginPage -->
       <class name="testScripts.GoogleSearch">
         <methods>
           <include name="SeleniumTutorial_Search"/>

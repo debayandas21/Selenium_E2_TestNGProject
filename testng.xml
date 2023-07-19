@@ -8,6 +8,7 @@
 			<!-- <class name="testScripts.SampleTestNG_classOne" />
 			<class name="testScripts.SampleTestNG_classThree" /> -->
 			<class name="testScripts.GoogleSearch" />
+			<class name="testScripts.browserLoginPage"/>
 
 		</classes>
 	</test> <!-- Test -->
