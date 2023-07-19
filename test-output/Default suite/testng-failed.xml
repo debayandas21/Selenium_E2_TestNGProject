@@ -5,6 +5,7 @@
     <classes>
       <class name="testScripts.GoogleSearch">
         <methods>
+          <include name="SeleniumTutorial_Search"/>
           <include name="JavaTutorial_Search"/>
           <include name="Setup"/>
           <include name="TearDown"/>
