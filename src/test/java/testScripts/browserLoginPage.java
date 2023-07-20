@@ -45,17 +45,6 @@ public class browserLoginPage {
 
 	@BeforeTest
 	public void setupProperty() throws IOException {
-		prop = new Properties();
-		
-		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\Config\\config.properties";
-		FileInputStream fi = new FileInputStream(path);
-		try {
-
-		prop.load(fi);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		String browserName= prop.getProperty("browser");
 			if(browserName.equalsIgnoreCase("chrome")) {

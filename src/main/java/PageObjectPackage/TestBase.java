@@ -10,17 +10,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BasePage {
+public class TestBase {
 	public static WebDriver driver;
 	public static Properties prop;
 
-	public static void testBase() throws IOException {
+	public TestBase()  {
 		prop = new Properties();
 		String path = System.getProperty("user.dir") + "\\src\\test\\resources\\Config\\config.properties";
-		FileInputStream fi = new FileInputStream(path);
+		FileInputStream fi = null;
+		try {
+			fi = new FileInputStream(path);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
 		try {
 			prop.load(fi);
-		} catch (FileNotFoundException e) {
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -38,5 +45,6 @@ public class BasePage {
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.get(prop.getProperty("url"));
 	}
 }
