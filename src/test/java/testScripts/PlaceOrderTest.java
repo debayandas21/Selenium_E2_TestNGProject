@@ -6,16 +6,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-
 import PageObjectPackage.TestBase;
 import Pages.HomePage;
+import Pages.ItemPage;
 
-
-public class PlaceOrderPage extends TestBase
-{
-
+public class PlaceOrderTest extends TestBase {
 
 	HomePage home;
+	ItemPage item;
 
 	@BeforeTest
 	public void launchBrowser() {
@@ -25,8 +23,12 @@ public class PlaceOrderPage extends TestBase
 	@Test
 	public void PlaceOrder() {
 		home = new HomePage();
+		item = new ItemPage();
 		try {
-			home.SearchBox("Harry Potter");
+			home.SearchBox("Parry Hotter");
+			item.SelectItem();
+			item.AddItemToCart();
+
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
