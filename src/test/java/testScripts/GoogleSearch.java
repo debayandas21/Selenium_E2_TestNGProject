@@ -53,7 +53,7 @@ public class GoogleSearch {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	}
-	@Test
+	@Test 
 	public void JavaTutorial_Search() {
 		
 		extentTest= reports.createTest("Java Tutorial search");
